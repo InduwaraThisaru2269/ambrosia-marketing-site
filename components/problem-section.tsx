@@ -26,7 +26,7 @@ export default function ProblemSection() {
           {/* Image */}
           <div className="w-full">
             <Image
-              src="/images/marketing-site-image-03.jpg"
+              src="/images/Marketing-site-image-03.jpg"
               alt="Restaurant kitchen with chefs working"
               className="w-full h-auto object-cover rounded-lg"
               width={1200}

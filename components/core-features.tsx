@@ -9,21 +9,21 @@ export default function CoreFeatures() {
       title: "Seamless reservations and seating",
       description:
         "Customers book online around the clock. No double-bookings, No confusion.",
-      image: "/images/marketing-site-image-06.jpg",
+      image: "/images/Marketing-site-image-06.jpg",
     },
     {
       icon: ChefHat,
       title: "Smart order and kitchen management",
       description:
         "QR code ordering flows straight to the kitchen. Speed and accuracy, every time.",
-      image: "/images/marketing-site-image-07.jpg",
+      image: "/images/Marketing-site-image-07.jpg",
     },
     {
       icon: Wine,
       title: "Integrated bar and liquor management",
       description:
         "Track every bottle and pour. Pricing handles the stay-inside margins.",
-      image: "/images/marketing-site-image-05.jpg",
+      image: "/images/Marketing-site-image-05.jpg",
     },
   ];
 

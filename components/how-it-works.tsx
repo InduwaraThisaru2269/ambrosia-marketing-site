@@ -28,7 +28,7 @@ export default function HowItWorks() {
       className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6"
       style={{
         backgroundImage:
-          "url(/images/marketing-site-image-04.jpg)",
+          "url(/images/Marketing-site-image-04.jpg)",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
