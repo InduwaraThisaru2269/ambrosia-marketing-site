@@ -1,9 +1,12 @@
 'use client'
 
+import { useState } from 'react'
 import { Check, CreditCard } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import ContactSalesModal from '@/components/contact-sales-modal'
 
 const PlansSection = () => {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false)
   const plans = [
     {
       name: 'Starter',
@@ -113,6 +116,7 @@ const PlansSection = () => {
               {/* CTA Button */}
               <div className="p-6 sm:p-8 border-t border-gray-200">
                 <Button
+                  onClick={() => plan.cta === 'Contact Sales' && setIsContactModalOpen(true)}
                   className={`w-full ${
                     plan.highlighted
                       ? 'bg-red-500 hover:bg-red-600 text-white'
@@ -133,6 +137,12 @@ const PlansSection = () => {
           </p>
         </div>
       </div>
+
+      {/* Contact Sales Modal */}
+      <ContactSalesModal
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+      />
     </section>
   )
 }
