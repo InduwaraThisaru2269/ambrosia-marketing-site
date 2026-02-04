@@ -40,7 +40,7 @@ const ValueSection = () => {
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
           <div className="flex justify-center mb-3">
-            <TrendingUp className="w-6 sm:w-7 h-6 sm:h-7 text-gray-700" />
+            <TrendingUp className="w-12 h-12 text-gray-700" />
           </div>
           <p className="text-xs sm:text-sm font-medium text-gray-600 mb-2">
             Value

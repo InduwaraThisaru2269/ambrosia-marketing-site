@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import Logo from "@/public/images/AmbrosiaLogoClearBG.png"
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,9 +25,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-serif font-bold text-gray-900">
-              Ambrosia
-            </h1>
+            <Image src={Logo} alt="Ambrosia Logo" width={150} height={40} />
           </div>
 
           {/* Desktop Navigation */}
@@ -50,6 +50,13 @@ export default function Header() {
               className="text-gray-700 hover:text-gray-900 font-medium text-sm"
             >
               Benefits
+            </a>
+            <a
+              href="#pricing"
+              onClick={(e) => handleScroll(e, "pricing")}
+              className="text-gray-700 hover:text-gray-900 font-medium text-sm"
+            >
+              Plans
             </a>
           </nav>
 
@@ -96,10 +103,11 @@ export default function Header() {
               Benefits
             </a>
             <a
-              href="#more"
+              href="#pricing"
+              onClick={(e) => handleScroll(e, "pricing")}
               className="text-gray-700 hover:text-gray-900 font-medium"
             >
-              More
+              Plans
             </a>
             <a
               href="#waitlist"

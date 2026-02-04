@@ -36,7 +36,7 @@ export default function CoreFeatures() {
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
           <div className="flex justify-center text-slate-600 mb-3">
-            <Zap className="w-6 h-6 text-slate-600" />
+            <Zap className="w-12 h-12 text-gray-700" />
           </div>
           <p className="text-xs sm:text-sm mb-2 text-slate-600 uppercase tracking-wide">
             Core

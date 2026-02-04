@@ -32,7 +32,7 @@ export default function RestFeatures() {
         {/* Header */}
         <div className="text-center mb-10 sm:mb-12">
           <div className="flex justify-center mb-3">
-            <Plus className="w-6 h-6 text-gray-600" />
+            <Plus className="w-12 h-12 text-gray-700" />
           </div>
           <p className="text-xs sm:text-sm font-medium text-gray-600 mb-2">
             More
