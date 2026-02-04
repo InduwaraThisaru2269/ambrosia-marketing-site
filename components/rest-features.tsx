@@ -37,7 +37,7 @@ export default function RestFeatures() {
           <p className="text-xs sm:text-sm font-medium text-gray-600 mb-2">
             More
           </p>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-2">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-medium text-black mb-2">
             The rest
           </h2>
           <p className="text-gray-700 text-base sm:text-lg">

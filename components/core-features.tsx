@@ -41,7 +41,7 @@ export default function CoreFeatures() {
           <p className="text-xs sm:text-sm mb-2 text-slate-600 uppercase tracking-wide">
             Core
           </p>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-medium text-gray-900 mb-3 sm:mb-4">
             What we built
           </h2>
           <p className="text-gray-600 text-base sm:text-lg">
