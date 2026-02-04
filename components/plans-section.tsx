@@ -1,6 +1,6 @@
 'use client'
 
-import { Check } from 'lucide-react'
+import { Check, CreditCard } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const PlansSection = () => {
@@ -61,6 +61,9 @@ const PlansSection = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
+          <div className="flex justify-center mb-4">
+            <CreditCard className="w-12 h-12 text-red-500" strokeWidth={1.5} />
+          </div>
           <p className="text-xs sm:text-sm font-medium text-gray-600 mb-2">
             Pricing
           </p>
