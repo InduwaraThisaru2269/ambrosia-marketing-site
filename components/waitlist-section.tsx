@@ -7,14 +7,40 @@ import { Input } from '@/components/ui/input'
 const WaitlistSection = () => {
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle waitlist signup
-    console.log('Email submitted:', email)
-    setEmail('')
-    setSubmitted(true)
-    setTimeout(() => setSubmitted(false), 5000)
+    setLoading(true)
+    setError('')
+
+    try {
+      const response = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        setError(data.error || 'Something went wrong. Please try again.')
+        setLoading(false)
+        return
+      }
+
+      setEmail('')
+      setSubmitted(true)
+      setTimeout(() => setSubmitted(false), 5000)
+    } catch (err) {
+      setError('Failed to join waitlist. Please try again.')
+      console.error('Waitlist error:', err)
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -35,13 +61,15 @@ const WaitlistSection = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              disabled={loading}
               className="flex-1 text-sm"
             />
             <Button
               type="submit"
-              className="bg-red-500 hover:bg-red-600 text-white px-4 sm:px-6 text-sm sm:text-base whitespace-nowrap"
+              disabled={loading}
+              className="bg-red-500 hover:bg-red-600 text-white px-4 sm:px-6 text-sm sm:text-base whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Join the Waitlist
+              {loading ? 'Joining...' : 'Join the Waitlist'}
             </Button>
           </form>
         ) : (
@@ -53,6 +81,11 @@ const WaitlistSection = () => {
               We&apos;ll update you soon with exclusive early access and founding-member offers.
             </p>
           </div>
+        )}
+        {error && (
+          <p className="text-red-600 text-base mt-4">
+            {error}
+          </p>
         )}
       </div>
     </section>
