@@ -10,7 +10,7 @@ const PlansSection = () => {
   const plans = [
     {
       name: "Starter",
-      price: "$99",
+      price: "$19",
       period: "/month",
       description:
         "Perfect for small restaurants starting their digital transformation",
@@ -26,7 +26,7 @@ const PlansSection = () => {
     },
     {
       name: "Professional",
-      price: "$299",
+      price: "$49",
       period: "/month",
       description: "Built for growing restaurants managing multiple locations",
       features: [
