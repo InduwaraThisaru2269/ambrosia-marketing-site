@@ -10,7 +10,7 @@ const PlansSection = () => {
   const plans = [
     {
       name: "Starter",
-      price: "$19",
+      price: "$9",
       period: "/month",
       description:
         "Perfect for small restaurants starting their digital transformation",
